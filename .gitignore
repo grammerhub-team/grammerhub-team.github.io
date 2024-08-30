@@ -1,24 +1,10 @@
-# Nuxt dev/build outputs
-.output
-.data
-.nuxt
-.nitro
-.cache
-dist
-
-# Node dependencies
+build
+dist / media
 node_modules
-
-# Logs
-logs
-*.log
-
-# Misc
 .DS_Store
-.fleet
-.idea
-
-# Local env files
 .env
-.env.*
-!.env.example
+.next
+.vercel
+
+# Payload default media upload directory
+public/media/
