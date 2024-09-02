@@ -1,3 +1,129 @@
+# Grammerhub Official Website
+
+## [TODO] Project Structure
+
+## Frameworks and Core Technologies:
+
+- Next.js: This is a React framework used for server-side rendering and building web applications. The project uses Next.js 15 (canary version).
+- React: The project uses React 19 (release candidate version).
+- TypeScript: The entire project is written in TypeScript, providing strong typing and better developer experience.
+- Payload CMS: This is a headless CMS built with TypeScript and used for content management.
+- Node.js: The backend runs on Node.js.
+
+## [TODO] Before you start
+
+## During development
+
+- Run `pnpm dev` to start the development server
+- Run `pnpm build` to build the project
+- Run `pnpm start` to start the production server
+- [TODO] Run `pnpm test` to run the tests
+
+### Payload
+
+- [Adding New Features to the Project](documentation/adding-new-feature-to-payload-cms.md)
+
+#### Generate Types and Importmap
+While working with payload, every time you update the schema (collection), you need to generate the types and the importmap.
+- Run `pnpm generate:types` to generate the types 
+- Run `pnpm generate:importmap` to generate the importmap
+
+
+## Database:
+
+PostgreSQL: The project uses PostgreSQL as the database, evidenced by the PostgreSQL adapter configuration.
+
+## Styling:
+
+Tailwind CSS: Used for utility-first CSS styling.
+CSS Modules: Some components use CSS modules for scoped styling.
+
+## UI Components:
+
+shadcn/ui: A collection of re-usable components built with Radix UI and Tailwind CSS.
+Radix UI: Used for accessible component primitives.
+
+## Routing:
+
+Next.js App Router: The project uses Next.js's new App Router for handling routes.
+
+## API:
+
+RESTful API: Payload CMS provides a RESTful API for data operations.
+GraphQL: Payload also supports GraphQL, as evidenced by the GraphQL playground route.
+
+## Authentication:
+
+JWT (JSON Web Tokens): Used for user authentication.
+
+## Form Handling:
+
+React Hook Form: Used for form state management and validation.
+
+## Code Quality and Formatting:
+
+- ESLint: For code linting.
+- Prettier: For code formatting.
+
+## Package Management:
+
+pnpm: The project uses pnpm as the package manager.
+
+
+Development Patterns:
+
+- Server-Side Rendering (SSR): Utilized through Next.js for better performance and SEO.
+- Static Site Generation (SSG): Also supported by Next.js for pages that can be pre-rendered.
+- API Routes: Next.js API routes are used for serverless functions.
+- Component-based Architecture: The UI is built using reusable React components.
+- Modular CSS: Tailwind and CSS modules are used for modular, scoped styling.
+- Content Blocks: The CMS uses a block-based content model for flexible page building.
+
+
+## Image Optimization:
+
+Next.js Image component: Used for automatic image optimization.
+
+
+## [TODO] Internationalization:
+
+The project has some setup for internationalization, though it's not fully implemented.
+
+
+## SEO:
+
+Custom SEO components and meta tags are implemented for better search engine optimization.
+
+
+## Caching:
+
+Next.js caching mechanisms are used, including the unstable_cache function for data fetching.
+
+
+## Environment Variables:
+
+Used for configuration management across different environments.
+
+
+## Docker:
+
+Dockerfile and docker-compose files are present for containerization.
+
+
+## [TODO] Testing:
+
+Jest configuration is present, indicating Jest is used for testing.
+
+
+## [TODO] Continuous Integration/Continuous Deployment (CI/CD):
+
+While not explicitly shown, the project structure suggests it's ready for CI/CD pipelines.
+
+## Version Control:
+
+Git is used for version control.
+
+
 # Payload Website Template
 
 This is the official [Payload Website Template](https://github.com/payloadcms/payload/blob/main/templates/website). Use it to power websites, blogs, or portfolios from small to enterprise. This repo includes a fully-working backend, enterprise-grade admin panel, and a beautifully designed, production-ready website.
