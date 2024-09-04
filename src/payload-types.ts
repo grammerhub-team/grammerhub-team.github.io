@@ -16,6 +16,7 @@ export interface Config {
     media: Media;
     categories: Category;
     users: User;
+    talents: Talent;
     redirects: Redirect;
     forms: Form;
     'form-submissions': FormSubmission;
@@ -227,6 +228,12 @@ export interface Page {
         id?: string | null;
         blockName?: string | null;
         blockType: 'formBlock';
+      }
+    | {
+        talent: number | Talent;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'talentCard';
       }
   )[];
   meta?: {
@@ -513,6 +520,32 @@ export interface Form {
           };
           [k: string]: unknown;
         } | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "talents".
+ */
+export interface Talent {
+  id: number;
+  name: string;
+  image: number | Media;
+  socialLinks?:
+    | {
+        platform: 'LinkedIn' | 'Twitter' | 'Facebook' | 'Instagram';
+        url: string;
+        id?: string | null;
+      }[]
+    | null;
+  github?: string | null;
+  technologyStack?:
+    | {
+        technology: string;
+        icon: number | Media;
         id?: string | null;
       }[]
     | null;
