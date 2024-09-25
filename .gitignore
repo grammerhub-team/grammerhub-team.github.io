@@ -1,11 +1,8 @@
 build
-dist / media
+dist
+/media
 node_modules
 .DS_Store
 .env
 .next
 .vercel
-/concatenated*
-
-# Payload default media upload directory
-public/media/

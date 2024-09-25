@@ -1,15 +1,31 @@
+version: '3'
+
 services:
-  postgres:
-    image: postgres
-    restart: always
+  payload:
+    image: node:18-alpine
     ports:
-      - '5432:5432'
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: admin
-      POSTGRES_DB: postgres
+      - '3000:3000'
     volumes:
-      - postgres:/var/lib/postgresql/data
+      - .:/home/node/app
+      - node_modules:/home/node/app/node_modules
+    working_dir: /home/node/app/
+    command: sh -c "yarn install && yarn dev"
+    depends_on:
+      - mongo
+    env_file:
+      - .env
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - '27017:27017'
+    command:
+      - --storageEngine=wiredTiger
+    volumes:
+      - data:/data/db
+    logging:
+      driver: none
 
 volumes:
-  postgres:
+  data:
+  node_modules:
