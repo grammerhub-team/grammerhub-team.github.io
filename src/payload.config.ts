@@ -7,15 +7,13 @@ import { nestedDocsPlugin } from '@payloadcms/plugin-nested-docs'
 import { redirectsPlugin } from '@payloadcms/plugin-redirects'
 import { seoPlugin } from '@payloadcms/plugin-seo'
 import {
-  BoldFeature,
   FixedToolbarFeature,
   HeadingFeature,
-  ItalicFeature,
   LinkFeature,
+  defaultEditorFeatures,
   lexicalEditor,
 } from '@payloadcms/richtext-lexical'
 import sharp from 'sharp' // editor-import
-import { UnderlineFeature } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
@@ -86,9 +84,7 @@ export default buildConfig({
   editor: lexicalEditor({
     features: () => {
       return [
-        UnderlineFeature(),
-        BoldFeature(),
-        ItalicFeature(),
+        ...defaultEditorFeatures,
         LinkFeature({
           enabledCollections: ['pages', 'posts'],
           fields: ({ defaultFields }) => {
