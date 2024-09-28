@@ -16,6 +16,7 @@ export interface Config {
     media: Media;
     categories: Category;
     users: User;
+    grammers: Grammer;
     redirects: Redirect;
     forms: Form;
     'form-submissions': FormSubmission;
@@ -541,6 +542,17 @@ export interface Form {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "grammers".
+ */
+export interface Grammer {
+  id: string;
+  name?: string | null;
+  title?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects".
  */
 export interface Redirect {
@@ -605,6 +617,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'users';
         value: string | User;
+      } | null)
+    | ({
+        relationTo: 'grammers';
+        value: string | Grammer;
       } | null)
     | ({
         relationTo: 'redirects';
