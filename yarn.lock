@@ -499,6 +499,7 @@
     "@smithy/abort-controller" "^3.1.5"
     "@smithy/middleware-endpoint" "^3.1.4"
     "@smithy/smithy-client" "^3.3.6"
+
     buffer "5.6.0"
     events "3.3.0"
     stream-browserify "3.0.0"
