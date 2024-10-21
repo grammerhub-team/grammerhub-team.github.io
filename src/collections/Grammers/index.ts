@@ -12,7 +12,7 @@ const Grammers: CollectionConfig = {
     update: authenticated,
   },
   admin: {
-    defaultColumns: ['name', 'email'],
+    defaultColumns: ['name', 'title', 'created_at'],
     useAsTitle: 'name',
   },
   fields: [
