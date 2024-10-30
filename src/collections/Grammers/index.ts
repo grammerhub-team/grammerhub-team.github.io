@@ -24,6 +24,14 @@ const Grammers: CollectionConfig = {
       name: 'title',
       type: 'text',
     },
+    {
+      name: 'description',
+      type: 'textarea',
+    },
+    {
+      name: 'portfolio link',
+      type: 'text',
+    },
   ],
   timestamps: true,
 }

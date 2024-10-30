@@ -549,6 +549,8 @@ export interface Grammer {
   id: string;
   name?: string | null;
   title?: string | null;
+  description?: string | null;
+  'portfolio link'?: string | null;
   updatedAt: string;
   createdAt: string;
 }
