@@ -19,10 +19,30 @@ const Grammers: CollectionConfig = {
     {
       name: 'name',
       type: 'text',
+      required: true,
     },
     {
       name: 'title',
       type: 'text',
+      required: true,
+    },
+    {
+      name: 'bio',
+      type: 'textarea',
+      required: true,
+      minLength: 100,
+      maxLength: 600,
+    },
+    {
+      name: 'portfolio_site',
+      type: 'text',
+      required: false,
+    },
+    {
+      name: 'author_image',
+      type: 'upload',
+      required: true,
+      relationTo: 'media',
     },
   ],
   timestamps: true,

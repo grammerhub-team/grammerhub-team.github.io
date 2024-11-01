@@ -547,8 +547,11 @@ export interface Form {
  */
 export interface Grammer {
   id: string;
-  name?: string | null;
-  title?: string | null;
+  name: string;
+  title: string;
+  bio: string;
+  portfolio_site?: string | null;
+  author_image: string | Media;
   updatedAt: string;
   createdAt: string;
 }
