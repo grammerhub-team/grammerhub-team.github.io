@@ -44,6 +44,12 @@ const Grammers: CollectionConfig = {
       required: true,
       relationTo: 'media',
     },
+    // This type is for deciding the order in which to place Grammers on the talent page
+    {
+      name: 'relative_ordering',
+      type: 'number',
+      required: true,
+    },
   ],
   timestamps: true,
 }

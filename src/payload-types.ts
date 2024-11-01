@@ -552,6 +552,7 @@ export interface Grammer {
   bio: string;
   portfolio_site?: string | null;
   author_image: string | Media;
+  relative_ordering: number;
   updatedAt: string;
   createdAt: string;
 }

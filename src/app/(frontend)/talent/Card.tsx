@@ -30,7 +30,7 @@ export function GrammerCard(props: GrammerCardProps) {
         <h3 className="font-semibold">{props.author}</h3>
         <h4>{props.title}</h4>
         {!!props.portfolioSite && (
-          <Link className="text-sm text-blue-500" href={props.portfolioSite}>View Portfolio</Link>
+          <Link target="_blank" className="text-sm text-blue-500" href={props.portfolioSite}>View Portfolio</Link>
         )}
         <div
           style={{
