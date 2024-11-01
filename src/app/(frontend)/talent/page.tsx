@@ -11,8 +11,6 @@ export default async function TalentPage() {
     sort: 'relative_ordering',
   })
 
-  console.log(grammers.docs);
-
   return (
     <div className="p-8 mx-auto">
       <h1 className="font-semibold text-4xl text-center">Talent</h1>
