@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -57,7 +58,7 @@ export default function Navigation() {
 						</DisclosureButton>
 					</div>
 					<div className='flex flex-1 items-center sm:justify-between justify-center sm:items-stretch'>
-						<div className='flex flex-shrink-0 items-center text-gray-700 '>Grammerhub</div>
+						<Image src='/images/logos/grammerhub-logo.svg' alt='logo' width={150} height={100} />
 						<div className='hidden sm:ml-6 sm:block'>
 							<div className='flex space-x-4'>
 								{navigation.map(menuItem => {
