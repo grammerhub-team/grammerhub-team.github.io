@@ -12,7 +12,7 @@ export default function About() {
 				bkUrl='/images/about-bk.jpeg'
 			/>
 
-			<div className='container mx-auto px-4 py-12'>
+			<div className='container mx-auto max-w-7xl  px-4 py-12'>
 				<div className='mt-12 mb-32'>
 					<h1 className='mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl'>
 						It all began with
