@@ -1,37 +1,32 @@
 const people = [
 	{
-		name: 'Lindsay Walton',
+		name: 'Allan Tito',
 		role: 'Front-end Developer',
-		imageUrl:
-			'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+		imageUrl: '/images/team/allan_tito_grammerhub.jpg',
 		xUrl: '#',
 		linkedinUrl: '#',
 	},
 	{
-		name: 'Lindsay Waltons',
+		name: 'Dani',
 		role: 'Front-end Developer',
-		imageUrl:
-			'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+		imageUrl: '/images/team/daniele_longo_grammerhub.jpg',
 		xUrl: '#',
 		linkedinUrl: '#',
 	},
 	{
-		name: 'Lindsay Waltone',
+		name: 'Henrique',
 		role: 'Front-end Developer',
-		imageUrl:
-			'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+		imageUrl: '/images/team/henrique-lopes-grammerhub.jpg',
 		xUrl: '#',
 		linkedinUrl: '#',
 	},
 	{
-		name: 'Lindsay Walton5',
+		name: 'Ash',
 		role: 'Front-end Developer',
-		imageUrl:
-			'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
+		imageUrl: '/images/team/ashley-clayden-moss-grammerhub.jpg',
 		xUrl: '#',
 		linkedinUrl: '#',
 	},
-	// More people...
 ]
 
 export const Team = () => {
@@ -50,7 +45,7 @@ export const Team = () => {
 					className='mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3'>
 					{people.map(person => (
 						<li key={person.name}>
-							<img alt='' src={person.imageUrl} className='aspect-[3/2] w-full rounded-2xl object-cover' />
+							<img alt='' src={person.imageUrl} className='w-full rounded-2xl object-cover object-top' />
 							<h3 className='mt-6 text-lg/8 font-semibold tracking-tight text-gray-900'>{person.name}</h3>
 							<p className='text-base/7 text-gray-600'>{person.role}</p>
 							<ul role='list' className='mt-6 flex gap-x-6'>
