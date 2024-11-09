@@ -23,6 +23,7 @@ const navigation: NavigationItem[] = [
 	// ],
 	// },
 	{ name: 'About', href: '/about', current: false },
+	{ name: 'Faqs', href: '/faqs', current: false },
 	// {
 	//   name: 'Speakers',
 	//   href: '#',
