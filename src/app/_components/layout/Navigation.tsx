@@ -66,9 +66,9 @@ export default function Navigation() {
 										<Menu as='div' key={menuItem.name} className='relative'>
 											<div>
 												<MenuButton className='rounded-md px-3 py-2 text-sm font-medium hover:underline transition ease-in-out duration-150'>
-													<a href={menuItem.href} className='rounded-md px-3 py-2 text-sm font-medium text-gray-600'>
+													<Link href={menuItem.href} className='rounded-md px-3 py-2 text-sm font-medium text-gray-600'>
 														{menuItem.name}
-													</a>
+													</Link>
 												</MenuButton>
 											</div>
 											{menuItem.sub_links && (
@@ -77,12 +77,12 @@ export default function Navigation() {
 													className='right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in'>
 													{menuItem.sub_links.map(subLink => (
 														<MenuItem key={subLink.href}>
-															<a
+															<Link
 																href={subLink.href}
 																target='_blank'
 																className='block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100'>
 																{subLink.name}
-															</a>
+															</Link>
 														</MenuItem>
 													))}
 												</MenuItems>
@@ -121,12 +121,12 @@ export default function Navigation() {
 								{item.sub_links && (
 									<DisclosurePanel className='pl-4'>
 										{item.sub_links.map(subLink => (
-											<a
+											<Link
 												key={subLink.href}
 												href={subLink.href}
 												className='block px-3 py-2 text-base text-gray-600 hover:bg-gray-700 hover:text-white'>
 												{subLink.name}
-											</a>
+											</Link>
 										))}
 									</DisclosurePanel>
 								)}

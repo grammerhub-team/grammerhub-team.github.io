@@ -1,5 +1,6 @@
 import { JSX, SVGProps } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const navigation = {
 	company: [
@@ -83,10 +84,10 @@ export default function Footer() {
 						</p>
 						<div className='flex gap-x-6'>
 							{navigation.social.map(item => (
-								<a key={item.name} href={item.href} target='_blank' className='text-gray-600 hover:text-gray-800'>
+								<Link key={item.name} href={item.href} target='_blank' className='text-gray-600 hover:text-gray-800'>
 									<span className='sr-only'>{item.name}</span>
 									<item.icon aria-hidden='true' className='h-6 w-6' />
-								</a>
+								</Link>
 							))}
 						</div>
 					</div>
@@ -97,13 +98,13 @@ export default function Footer() {
 								<ul role='list' className='mt-6 space-y-4'>
 									{navigation.company.map(item => (
 										<li key={item.name}>
-											<a
+											<Link
 												href={item.href}
 												target='_blank'
 												rel='noopener noreferrer'
 												className='text-sm/6 text-gray-600 hover:text-gray-900'>
 												{item.name}
-											</a>
+											</Link>
 										</li>
 									))}
 								</ul>
