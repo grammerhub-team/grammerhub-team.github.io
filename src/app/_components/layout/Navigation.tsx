@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 // todo: add links to pages when ready
 type NavigationItem = {
@@ -11,21 +12,18 @@ type NavigationItem = {
 }
 
 const navigation: NavigationItem[] = [
-	{
-		name: 'Talent',
-		href: '#',
-		current: true,
-		// sub_links: [
-		// 	{ name: 'SWFL Coders', href: 'https://www.meetup.com/swfl-coders/' },
-		// 	{ name: 'SWFLSec', href: 'https://www.meetup.com/SWFLSec-Southwest-Florida-Infosec-Meetup/' },
-		// 	{ name: 'Python SWFL', href: 'https://www.meetup.com/pythonswfl/' },
-		// 	{ name: 'SWFL Hackerspace', href: 'https://www.meetup.com/swfl-hackerspace/' },
-		// 	{ name: 'SWFL Tech Nights', href: 'https://www.meetup.com/swfltechnights/' },
-		// 	{ name: 'Music Producers SWFL', href: 'https://www.facebook.com/musicproducers.swfl' },
-		// 	{ name: 'AR & VR SWFL', href: 'https://www.meetup.com/vrarswfl/' },
-		// ],
-	},
-	{ name: 'About', href: '#', current: false },
+	// {
+	// name: 'Talent',
+	// href: '#',
+	// current: true,
+	// sub_links: [
+	// 	{ name: 'SWFL Coders', href: 'https://www.meetup.com/swfl-coders/' },
+	// 	{ name: 'SWFLSec', href: 'https://www.meetup.com/SWFLSec-Southwest-Florida-Infosec-Meetup/' },
+	// 	{ name: 'Python SWFL', href: 'https://www.meetup.com/pythonswfl/' },
+	// ],
+	// },
+	{ name: 'About', href: '/about', current: false },
+	{ name: 'Faqs', href: '/faqs', current: false },
 	// {
 	//   name: 'Speakers',
 	//   href: '#',
@@ -58,33 +56,33 @@ export default function Navigation() {
 						</DisclosureButton>
 					</div>
 					<div className='flex flex-1 items-center sm:justify-between justify-center sm:items-stretch'>
-						<Image src='/images/logos/grammerhub-logo.svg' alt='logo' width={150} height={100} />
-						<div className='hidden sm:ml-6 sm:block'>
-							<div className='flex space-x-4'>
+						<Link href='/'>
+							<Image src='/images/logos/grammerhub-logo.svg' alt='logo' width={150} height={100} />
+						</Link>
+						<div className='hidden sm:block'>
+							<div className='flex'>
 								{navigation.map(menuItem => {
 									return (
-										<Menu as='div' key={menuItem.name} className='relative ml-3'>
+										<Menu as='div' key={menuItem.name} className='relative'>
 											<div>
-												<MenuButton className='rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white  '>
-													<a
-														href='#'
-														className='rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:text-white'>
+												<MenuButton className='rounded-md px-3 py-2 text-sm font-medium hover:underline transition ease-in-out duration-150'>
+													<Link href={menuItem.href} className='rounded-md px-3 py-2 text-sm font-medium text-gray-600'>
 														{menuItem.name}
-													</a>
+													</Link>
 												</MenuButton>
 											</div>
 											{menuItem.sub_links && (
 												<MenuItems
 													transition
-													className='absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in'>
+													className='right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in'>
 													{menuItem.sub_links.map(subLink => (
 														<MenuItem key={subLink.href}>
-															<a
+															<Link
 																href={subLink.href}
 																target='_blank'
 																className='block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100'>
 																{subLink.name}
-															</a>
+															</Link>
 														</MenuItem>
 													))}
 												</MenuItems>
@@ -92,11 +90,13 @@ export default function Navigation() {
 										</Menu>
 									)
 								})}
-								<button
-									type='button'
-									className='rounded bg-indigo-50 px-2 py-1 text-sm font-semibold text-indigo-600 shadow-sm hover:bg-indigo-100'>
-									Join GrammerHub
-								</button>
+								<Link href='https://discord.com/channels/906246990457864273/906251227166306344' target='_blank'>
+									<button
+										type='button'
+										className='rounded bg-indigo-50 ml-6 px-6 py-2 text-sm font-semibold text-indigo-500 shadow-sm hover:bg-indigo-100'>
+										Join GrammerHub
+									</button>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -121,12 +121,12 @@ export default function Navigation() {
 								{item.sub_links && (
 									<DisclosurePanel className='pl-4'>
 										{item.sub_links.map(subLink => (
-											<a
+											<Link
 												key={subLink.href}
 												href={subLink.href}
 												className='block px-3 py-2 text-base text-gray-600 hover:bg-gray-700 hover:text-white'>
 												{subLink.name}
-											</a>
+											</Link>
 										))}
 									</DisclosurePanel>
 								)}
