@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 export const Hero = ({ heading, subheading, bkUrl, position }: { heading: string; subheading: string; bkUrl: string, position?:string }) => {
 	return (
 		<div className='relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32'>
-			<img alt='' src={bkUrl} className={`absolute inset-0 -z-10 h-full w-full object-cover object-${position}`} />
+			<Image alt='' src={bkUrl} fill className={`absolute inset-0 -z-10 object-${position}`} />
 			<div className='absolute inset-0 -z-10 bg-black opacity-70'></div>
 			<div
 				aria-hidden='true'
