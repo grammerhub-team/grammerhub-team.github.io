@@ -1,5 +1,6 @@
 import EventCardList from "../_components/EventCardList"
 import { Hero } from "../_components/Hero"
+import PageDetail from "../_components/PageDetail"
 
 const events = [
 	{
@@ -70,6 +71,17 @@ const events = [
 	},
 ]
 
+const pageDetail = {
+	title: "Lorem ipsum dolor sit",
+	text: `
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	`,
+}
+
 export default function Event() {
 	return (
 		<>
@@ -80,6 +92,11 @@ export default function Event() {
 			/>
 
 			<div className='container mx-auto max-w-7xl  px-4 py-12'>
+				<PageDetail
+					title={pageDetail.title}
+					text={pageDetail.text}
+				/>
+
 				<EventCardList events={events} />
 			</div>
 		</>
