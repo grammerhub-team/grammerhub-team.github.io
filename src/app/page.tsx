@@ -62,14 +62,14 @@ export default function Home() {
 					<h2 className='text-5xl font-semibold tracking-tight text-white sm:text-5xl'>
 						Streaming Live at 6:30pm EST every Monday
 					</h2>
-					<p className='mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8'>
+					<div className='mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8'>
 						Our goals for GrammerHub&apos;s Weekly Monday sessions are:
 						<ul className='list-disc list-inside'>
 							<li>Support independent projects and collaboration</li>
 							<li>Build a community and provide accountability</li>
 							<li>Provide opportunities to grow professionally in Tech </li>
 						</ul>
-					</p>
+					</div>
 				</div>
 			</div>
 			<Team />
