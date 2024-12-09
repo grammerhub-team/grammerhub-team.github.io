@@ -16,7 +16,7 @@ const events = [
 		title: "Grammerhub | Week 3 - Mockup Interviews",
 		location: "Online - Grammerhub Discord Channel",
 		date: "Mon Jan 20th, 2025 • 06:30PM",
-		image: "/images/event/Red_Black_Christmas_Party_Flyer.png",
+		image: "/images/event/grammerhub_w3_mon_meet.png",
 		description: `By the Third Monday of the Month, you've placed great emphasis on your educational gaps, 
 			making improvements to your digital assets, and now you feel ready to sit with Senior-level Grammers who are
 			going to work with you on your interviewing skills.
