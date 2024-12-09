@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Team } from './_components/Team'
+import OurPartnersLogos from './_components/OurPartnersLogos'
 
 export default function Home() {
 	return (
@@ -73,6 +74,8 @@ export default function Home() {
 				</div>
 			</div>
 			<Team />
+
+			<OurPartnersLogos />
 		</main>
 	)
 }
