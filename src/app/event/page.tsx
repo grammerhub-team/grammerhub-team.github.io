@@ -15,14 +15,8 @@ const events = [
 ]
 
 const pageDetail = {
-	title: "Lorem ipsum dolor sit",
-	text: `
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	`,
+	title: "Our upcoming events",
+	text: `Refer to the list below to stay updated on our latest activities and upcoming events.`,
 }
 
 export default function Event() {
@@ -30,7 +24,7 @@ export default function Event() {
 		<>
 			<Hero
 				heading="Events"
-				subheading="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+				subheading="We hold events throughout the year!"
 				bkUrl="/images/grammerhub-hackathon-2022.jpg"
 			/>
 
