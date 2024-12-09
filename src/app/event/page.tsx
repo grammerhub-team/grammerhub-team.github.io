@@ -18,9 +18,9 @@ const events = [
 		date: "Mon Jan 20th, 2025 • 06:30PM",
 		image: "/images/event/Red_Black_Christmas_Party_Flyer.png",
 		description: `By the Third Monday of the Month, you've placed great emphasis on your educational gaps, 
-			making improvements to your digital assets, and now feel ready to sit with Senior-level Grammers who are
+			making improvements to your digital assets, and now you feel ready to sit with Senior-level Grammers who are
 			going to work with you on your interviewing skills.
-			Leetcode, white-boarding, and interview camera-facing will be your moments to shine - You got this
+			Leetcode, white-boarding, and interview camera-facing will be your moments to shine - You got this!
 		`,
 	},
 ]
