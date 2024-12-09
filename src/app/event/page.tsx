@@ -1,72 +1,15 @@
-import EventCardList from "../_components/EventCardList"
+import EventCardList from "../_components/event/EventCardList"
 import { Hero } from "../_components/Hero"
 import PageDetail from "../_components/PageDetail"
 
 const events = [
 	{
-		title: "Event 1",
-		date: new Date(),
-		image: "/images/about-bk.jpeg",
-		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		`,
-	},
-	{
-		title: "Event 2",
-		date: new Date(),
-		image: "/images/about-bk.jpeg",
-		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		`,
-	},
-	{
-		title: "Event 3",
-		date: new Date(),
-		image: "/images/about-bk.jpeg",
-		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		`,
-	},
-	{
-		title: "Event 4",
-		date: new Date(),
-		image: "/images/about-bk.jpeg",
-		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		`,
-	},
-	{
-		title: "Event 5",
-		date: new Date(),
-		image: "/images/about-bk.jpeg",
-		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		`,
-	},
-	{
-		title: "Event 6",
-		date: new Date(),
-		image: "/images/about-bk.jpeg",
-		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-		Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		title: "Grammerhub | In-Person Meetup",
+		location: "Guild Hall, 1447 lyons rd, Coconut Creek, Florida 33063",
+		date: "Sat Dec 21st • 12:30PM-02:30PM",
+		image: "/images/event/Red_Black_Christmas_Party_Flyer.png",
+		description: `Meet in person with us in Broward, Florida. GuildHall is an anime lounge with 
+		food, drink, board games, international snacks, video games, tournaments and more.
 		`,
 	},
 ]
