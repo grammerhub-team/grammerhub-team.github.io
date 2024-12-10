@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Team } from './_components/Team'
-import WhereGrammersWork from './_components/whereGrammersWork/WhereGrammersWrok'
+import WhereGrammersWork from './_components/whereGrammersWork/WhereGrammersWork'
 
 export default function Home() {
 	return (

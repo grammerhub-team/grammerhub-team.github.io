@@ -15,7 +15,7 @@ const data = [
 
 const WhereGrammersWork = () => {
 	return (
-		<div className="bg-white pt-24">
+		<div className="bg-white pt-20">
 			<div className='mx-auto max-w-7xl px-6 lg:px-8'>
 				<h2 className='text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl'>Where Grammers work</h2>
 
