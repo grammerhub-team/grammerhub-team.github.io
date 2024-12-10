@@ -1,17 +1,13 @@
 import Image from "next/image"
 
-const OurPartnerLogo = ({ alt, src, bgColor = "" }: { alt: string, src: string, bgColor?: string }) => {
-	const color = bgColor !== "" ? `bg-[${bgColor}] p-4 rounded-md` : ""
-
+const OurPartnerLogo = ({ alt, src }: { alt: string, src: string }) => {
 	return (
-		< div className={color}>
-			<Image
-				alt={alt}
-				src={src}
-				width={158}
-				height={48}
-			/>
-		</div >
+		<Image
+			alt={alt}
+			src={src}
+			width={158}
+			height={48}
+		/>
 	)
 }
 

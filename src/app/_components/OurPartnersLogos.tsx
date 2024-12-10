@@ -2,34 +2,34 @@ import OurPartnerLogo from "./ourPartnersLogos/OurPartnerLogo"
 
 const data = [
 	{
+		_id: 1,
 		alt: "Tech Alliance Of SWFL",
 		src: "/images/our_partners_logos/tech_alliance_swfl.png",
-		bgColor: "",
 	},
 	{
+		_id: 2,
 		alt: "South Florida Tech Hub",
-		src: "/images/our_partners_logos/south_florida_tech_hub.png",
-		bgColor: "#000000",
+		src: "/images/our_partners_logos/south_florida_tech_hub1.png",
 	},
 	{
+		_id: 3,
 		alt: "Radical Partners",
 		src: "/images/our_partners_logos/radical_partners.png",
-		bgColor: "",
 	},
 	{
+		_id: 4,
 		alt: "4Geeks",
 		src: "/images/our_partners_logos/4geeks.svg",
-		bgColor: "",
 	},
 	{
+		_id: 5,
 		alt: "Code Kentucky",
-		src: "/images/our_partners_logos/code_kentucky.png",
-		bgColor: "#000000",
+		src: "/images/our_partners_logos/code_kentucky1.png",
 	},
 	{
+		_id: 6,
 		alt: "Miami Tech Works",
 		src: "/images/our_partners_logos/miami_tech_works.svg",
-		bgColor: "",
 	},
 ]
 
@@ -43,12 +43,11 @@ const OurPartnersLogos = () => {
 				</h2>
 
 				<div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-					{data.map((logo, index) => (
+					{data.map((logo) => (
 						<OurPartnerLogo
-							key={index}
+							key={logo?._id}
 							alt={logo?.alt}
 							src={logo?.src}
-							bgColor={logo?.bgColor}
 						/>)
 					)}
 				</div>
