@@ -3,43 +3,43 @@ import Marquee from "react-fast-marquee"
 const data = [
 	{
 		_id: 1,
-		location: "Amex"
+		name: "Amex"
 	},
 	{
 		_id: 2,
-		location: "Nvidia"
+		name: "Nvidia"
 	},
 	{
 		_id: 3,
-		location: "City of Atlanta"
+		name: "City of Atlanta"
 	},
 	{
 		_id: 4,
-		location: "City Furniture"
+		name: "City Furniture"
 	},
 	{
 		_id: 5,
-		location: "Amazon"
+		name: "Amazon"
 	},
 	{
 		_id: 6,
-		location: "Vertafore"
+		name: "Vertafore"
 	},
 	{
 		_id: 7,
-		location: "Cypher Learning"
+		name: "Cypher Learning"
 	},
 	{
 		_id: 8,
-		location: "USPS"
+		name: "USPS"
 	},
 	{
 		_id: 9,
-		location: "FPL"
+		name: "FPL"
 	},
 	{
 		_id: 10,
-		location: "Manit"
+		name: "Manit"
 	},
 ]
 
@@ -57,7 +57,7 @@ const WhereGrammersWork = () => {
 							key={work?._id}
 							className="text-pretty text-3xl tracking-tight text-gray-900 mr-20"
 						>
-							{work?.location}
+							{work?.name}
 						</p>
 					)}
 				</Marquee>
