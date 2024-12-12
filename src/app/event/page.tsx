@@ -1,9 +1,10 @@
-import EventCardList from "../_components/event/EventCardList"
+import EventCard from "../_components/event/EventCard"
 import { Hero } from "../_components/Hero"
 import PageDetail from "../_components/PageDetail"
 
 const events = [
 	{
+		_id: 1,
 		title: "Grammerhub | In-Person Meetup",
 		location: "Guild Hall, 1447 lyons rd, Coconut Creek, Florida 33063",
 		date: "Sat Dec 21st, 2024 • 12:30PM-02:30PM",
@@ -13,6 +14,7 @@ const events = [
 		`,
 	},
 	{
+		_id: 2,
 		title: "Grammerhub | Week 3 - Mockup Interviews",
 		location: "Online - Grammerhub Discord Channel",
 		date: "Mon Jan 20th, 2025 • 06:30PM",
@@ -45,7 +47,15 @@ export default function Event() {
 					text={pageDetail.text}
 				/>
 
-				<EventCardList events={events} />
+				<ul role="list" className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 xl:gap-x-8">
+					{events.map((event, index) => (
+						<EventCard
+							key={index}
+							event={event}
+						/>
+					))}
+				</ul>
+
 			</div>
 		</>
 	)
