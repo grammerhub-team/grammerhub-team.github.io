@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const Hero = ({ heading, subheading, bkUrl, position }: { heading: string; subheading: string; bkUrl: string, position?:string }) => {
+export const Hero = ({ heading, subheading, bkUrl, position }: { heading: string; subheading: string; bkUrl: string, position?: string }) => {
 	return (
 		<div className='relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32'>
 			<Image alt='' src={bkUrl} fill className={`absolute inset-0 -z-10 object-${position}`} />
@@ -36,3 +36,4 @@ export const Hero = ({ heading, subheading, bkUrl, position }: { heading: string
 		</div>
 	)
 }
+
