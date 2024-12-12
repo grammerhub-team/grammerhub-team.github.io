@@ -1,4 +1,5 @@
-import AlumniCardList from "../_components/alumni/AlumniCardList"
+import AlumniCard from "../_components/alumni/AlumniCard"
+
 const data = [
 	{
 		_id: "1",
@@ -52,7 +53,20 @@ const Alumni = () => {
 		<div className='container mx-auto max-w-7xl  px-4 py-12'>
 			<h2 className='text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl'>Grammers Alumni</h2>
 
-			<AlumniCardList data={data} />
+			{data.map((alumni, index) => (
+				<AlumniCard
+					key={alumni?._id}
+					index={index}
+					_id={alumni?._id}
+					image={alumni?.image}
+					first={alumni?.first}
+					last={alumni?.last}
+					title={alumni?.title}
+					about={alumni?.about}
+					skills={alumni?.skills}
+					portfolioLink={alumni?.portfolioLink}
+				/>
+			))}
 		</div>
 	)
 }
