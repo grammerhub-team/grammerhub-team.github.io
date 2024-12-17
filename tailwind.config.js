@@ -9,6 +9,10 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      'geist': ['GeistVF', 'sans-serif'],
+      'geist-mono': ['GeistMonoVF', 'monospace'],
+    },
     extend: {},
   },
   plugins: [],

@@ -7,3 +7,25 @@ body {
 	background: var(--background);
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+/* In order to use a font family, you use the name from the font-family key. */
+
+@layer base {
+	@font-face {
+	  font-family: 'GeistVF';
+	  font-style: normal;
+	  font-weight: 500;
+	  font-display: swap;
+	  src: url(/src/app/fonts/GeistVF.woff) format('woff');
+	}
+  }
+
+  @layer base {
+	@font-face {
+	  font-family: 'GeistMonoVF';
+	  font-style: normal;
+	  font-weight: 500;
+	  font-display: swap;
+	  src: url(/src/app/fonts/GeistMonoVF.woff) format('woff');
+	}
+  }

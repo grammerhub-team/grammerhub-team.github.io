@@ -61,17 +61,33 @@ export default function Home() {
 						className='aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20'
 					/>
 				</div>
-				<div className='mx-auto max-w-2xl text-center'>
-					<h2 className='text-5xl font-semibold tracking-tight text-white sm:text-5xl'>
-						Streaming Live at 6:30pm EST every Monday
+				<div className='mx-auto max-w-6xl '>
+					<h2 className='text-6xl font-semibold tracking-tight text-white text-center mb-10'>
+						How It Works
 					</h2>
-					<div className='mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8'>
-						Our goals for GrammerHub&apos;s Weekly Monday sessions are:
-						<ul className='list-disc list-inside'>
-							<li>Support independent projects and collaboration</li>
-							<li>Build a community and provide accountability</li>
-							<li>Provide opportunities to grow professionally in Tech </li>
-						</ul>
+					<div className='flex gap-16'>
+						<div className="relative w-full " style={{ paddingTop: '56.25%' }}>
+							<Image
+								src='/images/grammerhub-bk.jpg'
+								alt='logo'
+								fill
+								style={{
+									clipPath: 'inset(0 5% 0 5%)', objectFit: "cover", objectPosition: "center",
+								}}
+							/>
+						</div>
+						<div className='text-pretty font-geistvf text-lg font-medium text-gray-400 sm:text-xl/8'>
+							<div className='mb-10'>
+								<p className='text-6xl text-white mb-3 font-geist'>6:30 PM EST</p>
+								<span className='text-2xl text-white'>We open our general video conference call (Intros, Q&A, Show-and-Tell, etc.)</span>
+							</div>
+							<div className='mb-10'>
+								<p className='text-6xl text-white mb-3'>7:00 PM EST</p>
+								<span className='text-2xl text-white'>Work on Projects, Hackathons, Career Prep, Job Search, and much more</span>
+							</div>
+							<p className='text-6xl text-white mb-3'>8:15 PM EST</p>
+							<span className='text-2xl text-white'>Wrap-up, Announcements</span>
+						</div>
 					</div>
 				</div>
 			</div>
