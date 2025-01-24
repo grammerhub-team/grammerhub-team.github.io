@@ -31,7 +31,7 @@ export default function FAQs() {
 				heading='Faqs'
 				subheading='Get answers to common questions about Grammerhub.'
 				bkUrl='/images/faqs-bk.jpeg'
-				position='center'
+				position='34%'
 			/>
 			<div className='bg-white'>
 				<div className='mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40'>

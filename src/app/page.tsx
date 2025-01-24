@@ -1,13 +1,13 @@
 import Image from 'next/image'
-import { Team } from './_components/Team'
+// import { Team } from './_components/Team'
 import OurPartnersLogos from './_components/OurPartnersLogos'
-import WhereGrammersWork from './_components/whereGrammersWork/WhereGrammersWork'
+// import WhereGrammersWork from './_components/whereGrammersWork/WhereGrammersWork'
 
 export default function Home() {
 	return (
 		<main className='items-center w-full h-full'>
 			<div className='w-full' style={{ height: '700px', position: 'relative', top: 0 }}>
-				<Image src='/images/grammerhub-bk.jpg' alt='logo' fill />
+				<Image src='/images/grammerhub-bk.jpg' alt='logo' layout='fill' objectFit='cover' />
 			</div>
 			<div className='bg-white w-full'>
 				<div className='px-6 py-24 sm:px-6 sm:py-32 lg:px-8'>
@@ -37,7 +37,8 @@ export default function Home() {
 					alt=''
 					src='https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply'
 					className='absolute inset-0 -z-10'
-					fill
+					layout='fill'
+					objectFit='cover'
 				/>
 				<div
 					aria-hidden='true'
@@ -61,22 +62,28 @@ export default function Home() {
 						className='aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20'
 					/>
 				</div>
-				<div className='mx-auto max-w-2xl text-center'>
-					<h2 className='text-5xl font-semibold tracking-tight text-white sm:text-5xl'>
-						Streaming Live at 6:30pm EST every Monday
-					</h2>
-					<div className='mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8'>
-						Our goals for GrammerHub&apos;s Weekly Monday sessions are:
-						<ul className='list-disc list-inside'>
-							<li>Support independent projects and collaboration</li>
-							<li>Build a community and provide accountability</li>
-							<li>Provide opportunities to grow professionally in Tech </li>
-						</ul>
+				<div className='mx-auto text-center'>
+					<div className='flex flex-col sm:flex-row justify-evenly items-center'>
+						<div className='w-[500]'>
+							<img src='/images/grammerhub-bk.jpg' alt='logo' className='w-full h-full object-cover' />
+						</div>
+						<div className='mt-8 text-pretty text-lg font-medium text-white sm:text-xl/8'>
+							<h2 className='text-7xl font-bold'>6:30 PM EST</h2>
+							<p>
+								We open our general video conference call <br></br>(Intros, Q&A, Show-and-Tell, etc.)
+							</p>
+							<h2 className='text-7xl font-bold mt-8'>7:00 PM EST</h2>
+							<p>
+								Work on Projects, Hackathons, Career Prep,<br></br> Job Search, and much more
+							</p>
+							<h2 className='text-7xl font-bold mt-8'>8:15 PM EST</h2>
+							<p>Wrap-up, Announcements</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<WhereGrammersWork />
-			<Team />
+			{/* <WhereGrammersWork /> */}
+			{/* <Team /> */}
 
 			<OurPartnersLogos />
 		</main>
