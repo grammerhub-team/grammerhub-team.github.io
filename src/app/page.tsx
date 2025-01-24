@@ -64,7 +64,7 @@ export default function Home() {
 				</div>
 				<div className='mx-auto text-center'>
 					<div className='flex flex-col sm:flex-row justify-evenly items-center'>
-						<div className='w-[500]'>
+						<div className='max-w-lg'>
 							<img src='/images/grammerhub-bk.jpg' alt='logo' className='w-full h-full object-cover' />
 						</div>
 						<div className='mt-8 text-pretty text-lg font-medium text-white sm:text-xl/8'>
