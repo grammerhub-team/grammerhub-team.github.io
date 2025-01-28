@@ -10,7 +10,7 @@ export default function TalentPage() {
       </h1>
       <p className="text-center mt-[1rem] text-sm">
         Grammerhub is commited to providing top-quality talent to help your
-        business succeed. <br />
+        business succeed. <br></br>
         Browse out talent listings today and find the perfect tech professional
         for your company!
       </p>
