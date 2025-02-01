@@ -5,15 +5,14 @@ type CProps = {
 	_id: string,
 	index: number,
 	image: string,
-	first: string,
-	last: string,
+	name: string,
 	title: string,
 	about: string,
 	skills: string[],
 	portfolioLink: string,
 }
 
-const AlumniCard = ({ index, image, first, last, title, about, skills, portfolioLink }: CProps) => {
+const AlumniCard = ({ index, image, name, title, about, skills, portfolioLink }: CProps) => {
 	return (
 		<div className={`mt-12 lg:flex lg:gap-10 lg:mt-20 ${index % 2 !== 0 && "lg:flex-row-reverse"} `}>
 			<div className="group overflow-hidden rounded-lg focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
@@ -27,7 +26,7 @@ const AlumniCard = ({ index, image, first, last, title, about, skills, portfolio
 			</div>
 
 			<div className="flex-1">
-				<p className="pointer-events-none block truncate text-4xl font-medium text-gray-900 mt-4 lg:mt-0">{`${first} ${last}`}</p>
+				<p className="pointer-events-none block truncate text-4xl font-medium text-gray-900 mt-4 lg:mt-0">{`${name}`}</p>
 
 				<p className="pointer-events-none mt-2 block truncate text-xl font-medium text-gray-900">{title}</p>
 

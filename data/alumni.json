@@ -1,0 +1,97 @@
+[
+  {
+    "_id": "01",
+    "name": "Lia Moua",
+    "title": "Full-Stack Software Engineer",
+    "about": "I'm a full-stack software engineer with a background in criminal justice. Pretty interesting and a story to tell! I am career transitioning to software engineering and development. With my prior experiences in criminal justice, I'm always a team player. I enjoy working in teams to solve challenges and problems. I'm a leader who encourages and helps my team to excel. I enjoy the continuation of learning because learning allows me to advance my knowledge in areas where it’s needed. I'm currently looking for software engineering/development opportunities.",
+    "skills": [
+      "Javascript",
+      "HTML",
+      "CSS",
+      "React",
+      "SQLite",
+      "SQL",
+      "Express",
+      "NodeJS",
+      "PostgreSQL",
+      "Java",
+      "C#",
+      ".NET Core",
+      "Automation Testing",
+      "Quality Assurance"
+    ],
+    "portfolioLink": "https://github.com/moua0061",
+    "image": "/images/talent/lia-moua.jpeg"
+  },
+  {
+    "_id": "03",
+    "name": "Jody VanHoose",
+    "title": "Product Designer + Front-End Developer",
+    "about": "Hello, my name is Jody VanHoose. I am a Front End Web Developer who graduated from Code Kentucky Bootcamp. I have always had a passion for working and tinkering with tech. As I am also a Physical Therapist Assistant with many years of experience in healthcare, I bring many other qualifications with me like good oral and written communication, collaboration with interdisciplinary teams, and problem-solving. I am currently in a leadership role and work well with other teammates. In addition to my current physical therapy duties, I am the unofficial \"IT guy\" for our facility. I'm excited to learn more and grow as a Front End Web Developer and I can't wait to be a part of your team and help solve tomorrow’s problems today!",
+    "skills": [
+      "SASS",
+      "Bootstrap",
+      "Tailwind CSS",
+      "Skeleton CSS",
+      "JavaScript",
+      "React js",
+      "Figma Design software",
+      "Git",
+      "GitHub",
+      "NPM"
+    ],
+    "portfolioLink": "https://jodyvanhoose.com/",
+    "image": "/images/talent/jody-vonhoose.png"
+  },
+  {
+    "_id": "04",
+    "name": "Andrea Everett",
+    "title": "Product Designer + Front-End Developer",
+    "about": "My name is Andrea Everett. I am a Web Developer with experience in HTML5/CSS, Javascript, and React. Knowledge of backend tools, such as Express.js, Node.js, and Postgres SQL to further support web-building process. Quick learner, efficient problem-solver, and organized. Eager to continually grow in knowledge and coding-efficiency.",
+    "skills": [
+      "Javascript",
+      "Typescript",
+      "HTML",
+      "CSS",
+      "React Native",
+      "ReactJS",
+      "Redux",
+      "Firebase",
+      "Express",
+      "Jira",
+      "GIT"
+    ],
+    "portfolioLink": "https://www.andreaeverett.dev/",
+    "image": "/images/talent/andrea-everett.png"
+  },
+  {
+    "_id": "05",
+    "name": "Malcolm Lowery",
+    "title": "App + Web + Mobile Developer",
+    "about": "I enjoy solving problems and experimenting when presented with an unknown. I am a motivated team player who also works well independently with minimal oversight. I operate with the mentality that every day is an opportunity to learn something new.",
+    "skills": [
+      "HTML5/CSS",
+      "Javascript",
+      "React",
+      "Express.js",
+      "Node.js",
+      "Postgres SQL"
+    ],
+    "portfolioLink": "https://malcolmlowery.github.io/",
+    "image": "/images/talent/malcolm-lowery.jpg"
+  },
+  {
+    "_id": "08",
+    "name": "Jasmin Villatoro",
+    "title": "Product Designer + Front-End Developer",
+    "about": "Hello! My name is Jasmin, I'm a Frontend Web Developer who loves to code beautiful interfaces with HTML, CSS, JavaScript, and Reactjs. I've created multiple UI projects as well as collaborated with other software developers. I'm an open-minded individual who loves learning new technologies.",
+    "skills": [
+      "ReactJS",
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "portfolioLink": "https://www.jasminvillatoroportfolio.com/",
+    "image": "/images/talent/jasmin-villatoro.jpg"
+  }
+]

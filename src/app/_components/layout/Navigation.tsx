@@ -12,19 +12,10 @@ type NavigationItem = {
 }
 
 const navigation: NavigationItem[] = [
-	// {
-	// name: 'Talent',
-	// href: '#',
-	// current: true,
-	// sub_links: [
-	// 	{ name: 'SWFL Coders', href: 'https://www.meetup.com/swfl-coders/' },
-	// 	{ name: 'SWFLSec', href: 'https://www.meetup.com/SWFLSec-Southwest-Florida-Infosec-Meetup/' },
-	// 	{ name: 'Python SWFL', href: 'https://www.meetup.com/pythonswfl/' },
-	// ],
-	// },
 	{ name: 'About', href: '/about', current: false },
 	{ name: 'Faqs', href: '/faqs', current: false },
 	{ name: 'Talent', href: '/talent', current: false },
+	{ name: 'Alumni', href: '/alumni', current: false },
 	// {
 	//   name: 'Speakers',
 	//   href: '#',

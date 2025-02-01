@@ -1,0 +1,35 @@
+[
+	{
+		"_id": "02",
+		"name": "Alex Curtis-Slep",
+		"title": "Front-End Developer",
+		"about": "Web developer and a multi-hackathon winner with a solid background in content creation. Curious and fast learner. As a bilingual Cuban immigrant with strong skills in problem-solving and effective communication, I believe technology is a natural continuation of my love for ﬁnding solutions and creatively building products that communicate value and help people.",
+		"skills": ["React", "Vue", "JavaScript", "Node", "Express", "CSS3", "SCSS", "HTML5"],
+		"portfolioLink": "https://alexcurtisslep.com",
+		"image": "/images/talent/alex-curtis.jpg"
+	},
+	{
+		"_id": "06",
+		"name": "Steven Smodish",
+		"title": "Software Engineer",
+		"skills": [
+			"JavaScript",
+			"Python",
+			"PHP",
+			"C",
+			"Java",
+			"SQL",
+			"React",
+			"Express",
+			"Next.js",
+			"MaterialUI",
+			"Node",
+			"Firebase",
+			"SASS",
+			"Bootstrap",
+			"Git/Github"
+		],
+		"portfolioLink": "https://github.com/ssmodish",
+		"image": "/images/talent/steve-smodish.jpg"
+	}
+]
