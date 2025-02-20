@@ -1,6 +1,6 @@
-import Image from 'next/image'
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Image from 'next/image'
 import Link from 'next/link'
 
 // todo: add links to pages when ready
@@ -16,6 +16,7 @@ const navigation: NavigationItem[] = [
 	{ name: 'Faqs', href: '/faqs', current: false },
 	{ name: 'Talent', href: '/talent', current: false },
 	{ name: 'Alumni', href: '/alumni', current: false },
+	{ name: 'Newsletter', href: '/newsletter', current: false },
 	// {
 	//   name: 'Speakers',
 	//   href: '#',
