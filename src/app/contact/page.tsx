@@ -1,19 +1,98 @@
 'use client'
 
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
-import { useState } from 'react'
+import { useState } from 'react';
+
+
 
 export default function ContactFormPage() {
+
+    type ValidationErrors = {
+        errors: boolean,
+        firstName?: string,
+        lastName?: string,
+        email?: string,
+        phoneNumber?: string,
+        message?: string
+    }
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [message, setMessage] = useState('');
+    const [errors, setErrors] = useState<ValidationErrors>({errors: false});
 
-    function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    function validateFirstName(firstName: string, valErrors: ValidationErrors) {
+        if (!firstName.length) {
+            valErrors.errors = true;
+            valErrors.firstName = "First Name Required"
+        }
+      }
+
+    function validateLastName(lastName: string, valErrors: ValidationErrors) {
+        if (!lastName.length) {
+            valErrors.errors = true;
+            valErrors.lastName = "Last Name Required"
+        }
+      }
+      
+      function validateEmail(email: string, valErrors: ValidationErrors) {
+        if (!email.length) {
+            valErrors.errors = true;
+            valErrors.email = "Email Required"
+        } else {
+            if (!/^[A-z0-9._!#$%&'*+\-\/=?^_`{|}~]+@[A-z0-9._!#$%&'*+\-\/=?^_`{|}~]+.[a-z]$/.test(email)) {
+                valErrors.errors = true;
+                valErrors.email = "Invalid Email"
+            }
+        }
+      }
+      
+      function validatePhoneNumber(phoneNumber: string, valErrors: ValidationErrors) {
+        if (!phoneNumber.length) {
+            valErrors.errors = true;
+            valErrors.phoneNumber = "Phone Number Required"
+        } else {
+            if (!/^[0-9]{10}$/.test(phoneNumber)) {
+                valErrors.errors = true;
+                valErrors.phoneNumber = "Invalid Phone Number"
+            }
+        }
+      }
+      
+      function validateMessage(message: string, valErrors: ValidationErrors) {
+        if (!message.length) {
+            valErrors.errors = true;
+            valErrors.message = "Message Required"
+        } else {
+            if (message.length > 300) {
+                valErrors.errors = true;
+                valErrors.phoneNumber = "No more than 300 Characters"
+            }
+        }
+      }
+
+    async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        fetch(`/api/contact`, {
+
+        type SuccessResponse = { message: string };
+        type ErrorResponse = { message: string };
+        
+        const valErrors: ValidationErrors = {errors: false};
+
+        validateFirstName(firstName, valErrors);
+        validateLastName(lastName, valErrors);
+        validateEmail(email, valErrors);
+        validatePhoneNumber(phoneNumber, valErrors);
+        validateMessage(message, valErrors);
+
+        if (valErrors.errors) {
+            setErrors(valErrors);
+            return;
+        }
+
+        const response = await fetch(`/api/contact`, {
             method: 'POST',
             body: JSON.stringify({
                 firstName,
@@ -22,12 +101,18 @@ export default function ContactFormPage() {
                 phoneNumber,
                 message
             }),
-            // body: '8',
             headers: {
                 'Content-type': 'application/json'
             }
         });
-        window.alert('Information Submitted')
+
+        if (response.ok) {
+            const successRes: SuccessResponse = await response.json();
+            window.alert(successRes.message);
+        } else {
+            const errorRes: ErrorResponse = await response.json();
+            window.alert(errorRes.message);
+        }
     }
 
 
@@ -123,6 +208,7 @@ export default function ContactFormPage() {
                             className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                         />
                         </div>
+                        {errors.firstName && <p className="block text-sm/6 text-red-500">{errors.firstName}</p>}
                     </div>
                     <div>
                         <label htmlFor="last-name" className="block text-sm/6 font-semibold text-gray-900">
@@ -139,6 +225,7 @@ export default function ContactFormPage() {
                             className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                         />
                         </div>
+                        {errors.lastName && <p className="block text-sm/6 text-red-500">{errors.lastName}</p>}
                     </div>
                     <div className="sm:col-span-2">
                         <label htmlFor="email" className="block text-sm/6 font-semibold text-gray-900">
@@ -155,6 +242,7 @@ export default function ContactFormPage() {
                             className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                         />
                         </div>
+                        {errors.email && <p className="block text-sm/6 text-red-500">{errors.email}</p>}
                     </div>
                     <div className="sm:col-span-2">
                         <label htmlFor="phone-number" className="block text-sm/6 font-semibold text-gray-900">
@@ -171,6 +259,7 @@ export default function ContactFormPage() {
                             className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                         />
                         </div>
+                        {errors.phoneNumber && <p className="block text-sm/6 text-red-500">{errors.phoneNumber}</p>}
                     </div>
                     <div className="sm:col-span-2">
                         <label htmlFor="message" className="block text-sm/6 font-semibold text-gray-900">
@@ -186,6 +275,7 @@ export default function ContactFormPage() {
                                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                             />
                         </div>
+                        {errors.message && <p className="block text-sm/6 text-red-500">{errors.message}</p>}
                     </div>
                     </div>
                     <div className="mt-8 flex justify-end">

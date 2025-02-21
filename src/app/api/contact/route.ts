@@ -2,11 +2,10 @@ export async function POST(req: Request) {
     
     const reqBody = await req.json()
 
-    try {
-      // //Send Data Code
-      console.log(reqBody);
+    const { firstName, lastName, email, phoneNumber, message } = reqBody;
 
-      return new Response('Success!', {
+    try {
+      return new Response(JSON.stringify({message: 'Success!'}), {
         status: 200,
       })
     } catch (error) {
@@ -16,3 +15,4 @@ export async function POST(req: Request) {
       })
     }
 }
+
