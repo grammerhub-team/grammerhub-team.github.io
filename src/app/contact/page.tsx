@@ -3,18 +3,18 @@
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 import { useState } from 'react';
 
-
+type ValidationErrors = {
+    errors: boolean,
+    firstName?: string,
+    lastName?: string,
+    email?: string,
+    phoneNumber?: string,
+    message?: string
+}
+type SuccessResponse = { message: string };
+type ErrorResponse = { message: string };
 
 export default function ContactFormPage() {
-
-    type ValidationErrors = {
-        errors: boolean,
-        firstName?: string,
-        lastName?: string,
-        email?: string,
-        phoneNumber?: string,
-        message?: string
-    }
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -28,16 +28,16 @@ export default function ContactFormPage() {
             valErrors.errors = true;
             valErrors.firstName = "First Name Required"
         }
-      }
+    }
 
     function validateLastName(lastName: string, valErrors: ValidationErrors) {
         if (!lastName.length) {
             valErrors.errors = true;
             valErrors.lastName = "Last Name Required"
         }
-      }
+    }
       
-      function validateEmail(email: string, valErrors: ValidationErrors) {
+    function validateEmail(email: string, valErrors: ValidationErrors) {
         if (!email.length) {
             valErrors.errors = true;
             valErrors.email = "Email Required"
@@ -47,9 +47,9 @@ export default function ContactFormPage() {
                 valErrors.email = "Invalid Email"
             }
         }
-      }
+    }
       
-      function validatePhoneNumber(phoneNumber: string, valErrors: ValidationErrors) {
+    function validatePhoneNumber(phoneNumber: string, valErrors: ValidationErrors) {
         if (!phoneNumber.length) {
             valErrors.errors = true;
             valErrors.phoneNumber = "Phone Number Required"
@@ -59,9 +59,9 @@ export default function ContactFormPage() {
                 valErrors.phoneNumber = "Invalid Phone Number"
             }
         }
-      }
+    }
       
-      function validateMessage(message: string, valErrors: ValidationErrors) {
+    function validateMessage(message: string, valErrors: ValidationErrors) {
         if (!message.length) {
             valErrors.errors = true;
             valErrors.message = "Message Required"
@@ -75,12 +75,10 @@ export default function ContactFormPage() {
 
     async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
-
-        type SuccessResponse = { message: string };
-        type ErrorResponse = { message: string };
         
         const valErrors: ValidationErrors = {errors: false};
 
+        setErrors({ errors: false});
         validateFirstName(firstName, valErrors);
         validateLastName(lastName, valErrors);
         validateEmail(email, valErrors);
