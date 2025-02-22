@@ -25,6 +25,7 @@ const navigation: NavigationItem[] = [
 	{ name: 'About', href: '/about', current: false },
 	{ name: 'Faqs', href: '/faqs', current: false },
 	{ name: 'Talent', href: '/talent', current: false },
+	{ name: 'Contact', href: '/contact', current: false },
 	// {
 	//   name: 'Speakers',
 	//   href: '#',
