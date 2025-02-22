@@ -1,11 +1,9 @@
 export async function POST(req: Request) {
     
-    const reqBody = await req.json()
-
-    const { firstName, lastName, email, phoneNumber, message } = reqBody;
+    const reqBody = await req.json();
 
     try {
-      return new Response(JSON.stringify({message: 'Success!'}), {
+      return new Response('Success!', {
         status: 200,
       })
     } catch (error) {
